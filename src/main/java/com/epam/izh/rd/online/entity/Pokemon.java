@@ -1,7 +1,7 @@
 package com.epam.izh.rd.online.entity;
 
 /**
- *
+ * Покемон. Поля должны заполняться из JSON, который возвратит внешний REST-service
  */
 public class Pokemon {
 
