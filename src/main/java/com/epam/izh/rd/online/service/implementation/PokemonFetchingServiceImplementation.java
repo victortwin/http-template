@@ -34,6 +34,7 @@ public class PokemonFetchingServiceImplementation implements PokemonFetchingServ
             pokemon = objectMapper.readValue(content.toString(), Pokemon.class);
 
         } catch (IOException e) {
+            e.printStackTrace();
             throw new IllegalArgumentException("Pokemon " + name + " does not exist.");
         }
         return pokemon;
@@ -52,6 +53,7 @@ public class PokemonFetchingServiceImplementation implements PokemonFetchingServ
             connection.getInputStream().read(pokemonImage);
         } catch (IOException e) {
             e.printStackTrace();
+            throw new IllegalArgumentException("Pokemon " + name + " does not exist.");
         }
         return pokemonImage;
     }
